@@ -1,2 +1,2 @@
-def test():
-    print('hello world')
+from .cash_flow import *
+
