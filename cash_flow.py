@@ -1,4 +1,5 @@
 import pandas as pd
+import QuantLib as ql
 
 def combine_legs(*legs):
     '''
