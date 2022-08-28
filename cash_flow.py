@@ -19,10 +19,10 @@ def explore_leg(leg) -> pd.DataFrame:
         Function shows a cash flow overview of a leg
     '''
     flds = ['date', 'amount', 'accrualDays', 'accrualEndDate', 'accrualPeriod', 'accrualStartDate', 'dayCounter',
-            'exCouponDate', 'nominal', 'rate', 'referencePeriodEnd','referencePeriodStart']
+            'exCouponDate', 'nominal', 'rate', 'fixingDate', 'spread', 'referencePeriodEnd','referencePeriodStart']
 
     res = []
-    for idx, cf in enumerate(list(map(ql.as_coupon, leg))):
+    for idx, cf in enumerate(list(map(ql.as_floating_rate_coupon, leg))):
         cf   = leg[idx] if not cf else cf # if as coupon was successful, take the coupon cf; if as coupon was not successful, use leg's cf
         vals = [getattr(cf, fld)() if hasattr(cf, fld) else None for fld in flds] # check if the cf has the function above and call it
         res.append(vals)
