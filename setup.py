@@ -9,7 +9,7 @@ setup(
     author='Marek Kolman',
     author_email='marek.kolman@gmail.com',
     license='MIT',
-    #packages=['pyexample'],
+    packages=['ql_extension'],
     install_requires=['QuantLib',
                       'pandas',                     
                       ],

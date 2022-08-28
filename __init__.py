@@ -1,2 +1,1 @@
-from .cash_flow import combine_legs, explore_leg
-
+from .ql_extension.cash_flow import combine_legs, explore_leg
