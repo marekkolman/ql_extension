@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='ql_extension',
-    version='0.0.4',    
+    version='0.0.5',    
     description='A example Python package',
     #url='https://github.com/shuds13/pyexample',
     author='Marek Kolman',
